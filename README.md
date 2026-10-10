@@ -6,7 +6,8 @@
 
 | Skill | 用途 | 來源 |
 | --- | --- | --- |
-| [tech-resume](skills/tech-resume/SKILL.md) | 技術履歷健檢、改寫 bullet、針對 JD 客製化，以及 LinkedIn／GitHub／cover letter | 由 Gergely Orosz《The Tech Resume Inside Out》（ByteByteGo 課程版）歸納的原則，非原書內容 |
+| [tech-resume](skills/tech-resume/SKILL.md) | 技術履歷健檢、改寫 bullet、針對 JD 客製化、研究所申請 CV，以及 LinkedIn／GitHub／cover letter | 由 Gergely Orosz《The Tech Resume Inside Out》（ByteByteGo 課程版）歸納的原則，非原書內容；研究所 CV 部分整理自加拿大學程官方頁 |
+| [media-note](skills/media-note/SKILL.md) | YouTube、podcast、課程錄音＋投影片 PDF → 附圖表與投影片頁的繁中 Obsidian 筆記；Claude Code 與 Codex 共用 | 自製。需要 Apple Silicon macOS、`uv`、ffmpeg、poppler；YouTube 另需 node、deno 或 bun 其一 |
 
 ## 安裝（新電腦）
 
@@ -18,11 +19,13 @@ git clone https://github.com/DancinAndrew/SKHub.git ~/Documents/SKHub
 ~/Documents/SKHub/install.sh
 ```
 
-`install.sh` 會把 `skills/` 底下每個資料夾以 symlink 連到 `~/.claude/skills/`：
+`install.sh` 會把 `skills/` 底下每個資料夾以 symlink 連到 `~/.claude/skills/`（Claude Code）和 `~/.agents/skills/`（Codex 等其他 agent）：
 
 - 已經是 symlink → 更新指向
-- 已有同名的實體資料夾 → 跳過並提示，不覆蓋
-- 要裝到別的位置：`CLAUDE_SKILLS_DIR=/path/to/skills ./install.sh`
+- 已有同名的實體資料夾 → 跳過並提示，不覆蓋（先把它移走再重跑）
+- 要裝到別的位置：`SKILL_TARGET_DIRS=/path/a:/path/b ./install.sh`
+
+`media-note/config/vaults.json` 記的是我自己的 Obsidian vault 位置（`~/Documents/...`）；新電腦的 vault 路徑不同時，改這個檔或用環境變數 `MEDIANOTE_VAULTS` 指向另一份設定。
 
 因為是 symlink，之後 `git pull` 就會直接更新已安裝的 skill。
 

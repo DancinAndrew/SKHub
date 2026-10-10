@@ -24,7 +24,7 @@ origin: personal — principles paraphrased and condensed from Gergely Orosz, "T
 - 目標職類（例：SE/FDE、Backend、AI/ML、Data）與年資級別
 - 有沒有具體 JD：有 → 模式 B；沒有 → 模式 A 並建議分版本
 - 目標市場與公司類型：大型科技 generalist／特定技術棧公司／顧問或外包／小新創
-- 用途是求職還是升學（升學履歷慣例不同：教育在前、GPA、研究經歷）
+- 用途是求職還是升學：升學（研究所申請）慣例不同，依 [references/grad-school.md](references/grad-school.md)，並先查該學程官方規定
 
 ## 模式 A：健檢（Review）
 

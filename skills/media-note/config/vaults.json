@@ -1,0 +1,28 @@
+{
+  "vaults": [
+    {
+      "name": "Business&Finance",
+      "root": "~/Documents/Business&Finance",
+      "notes_dir": "還沒處理",
+      "attachments_dir": "來源/附件",
+      "use_for": "財經、投資、總經、商業與科技產業的 podcast／影片（例：股癌、M觀點、科技浪、小Lin说）",
+      "rules": "只新增筆記、逐字稿與附件；不改 來源/原文/、不動 系統/資料/ 清冊。收錄登記等使用者另外下指令。"
+    },
+    {
+      "name": "Engineering",
+      "root": "~/Documents/Engineering",
+      "notes_dir": "未讀",
+      "attachments_dir": "99_Attachments",
+      "use_for": "技術、AI、程式、雲端、資安，以及大學課程與技術講座",
+      "rules": "只新增檔案，不改既有筆記。"
+    },
+    {
+      "name": "Personal",
+      "root": "~/Documents/Personal",
+      "notes_dir": "",
+      "attachments_dir": "99_Attachments",
+      "use_for": "職涯、語言考試、個人成長；筆記放進對應主題資料夾（例：Career、IELTS），開始前跟使用者確認資料夾",
+      "rules": "遵守 vault 根目錄 AGENTS.md；只新增檔案。"
+    }
+  ]
+}

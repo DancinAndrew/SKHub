@@ -24,6 +24,18 @@
 3. **換**：沒有成果數字，就用規模或複雜度數字（整合了 N 種資料源、N 個系統）。
 4. **留空**：草稿用 `[N]` 佔位並列入待補清單。**不要編。**
 
+## 數字說不完整的工作（排查、溝通、判斷）
+
+Support、solution engineering、資料治理這類工作，價值常在判斷與轉譯，不在件數。少量的件數（例如兩個月 10 張 ticket）單獨寫出來反而顯得小。改用這四種證據，任選兩三種組成一條：
+
+1. **複雜度**：問題有幾種路徑或變數、資料量、牽涉幾個系統（`across [N] deletion paths`、`100K+ records`）
+2. **判斷**：你在不確定中做了什麼決定、依據是什麼（`decided per case whether records were safe to delete`）
+3. **產出物**：留下了什麼可交接的東西——root-cause 報告、含重現步驟的 ticket、runbook、給非技術同事的說明
+4. **結果**：之後發生了什麼——被修好、被排進 roadmap、CSM 能直接回覆客戶、同類問題不再升級
+
+句型：`[動詞] [複雜的東西]，[做了什麼判斷或分析]，[產出物] that [結果]`。
+例（示意）：`Traced LLM-agent failures through execution traces (tools never called, guardrails not firing) and wrote reproducible tickets that Product used to prioritise fixes.`
+
 ## 弱 → 強 的改寫模式
 
 以下範例只示範句型，不是真實經歷。

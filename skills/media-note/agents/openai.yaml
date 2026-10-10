@@ -1,0 +1,4 @@
+interface:
+  display_name: "Media Note"
+  short_description: "YouTube／Podcast／課程錄音＋PDF → 附圖表與投影片的繁中 Obsidian 筆記"
+  default_prompt: "Use $media-note to turn this YouTube link, podcast episode, or lecture recording (with slides) into an Obsidian note."
