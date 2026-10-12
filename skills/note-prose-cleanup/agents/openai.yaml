@@ -1,0 +1,4 @@
+interface:
+  display_name: "筆記文字清理"
+  short_description: "修順既有筆記，清除重複聲明與整理雜訊，保留必要限制與學習細節"
+  default_prompt: "使用 $note-prose-cleanup 修順這篇筆記，清除打斷閱讀的聲明與生硬句法，保留例子、來源與必要限制。"

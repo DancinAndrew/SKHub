@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | [tech-resume](skills/tech-resume/SKILL.md) | 技術履歷健檢、改寫 bullet、針對 JD 客製化、研究所申請 CV，以及 LinkedIn／GitHub／cover letter | 由 Gergely Orosz《The Tech Resume Inside Out》（ByteByteGo 課程版）歸納的原則，非原書內容；研究所 CV 部分整理自加拿大學程官方頁 |
 | [media-note](skills/media-note/SKILL.md) | YouTube、podcast、課程錄音＋投影片 PDF → 附圖表與投影片頁的繁中 Obsidian 筆記；Claude Code 與 Codex 共用 | 自製。需要 Apple Silicon macOS、`uv`、ffmpeg、poppler；YouTube 另需 node、deno 或 bun 其一 |
+| [note-prose-cleanup](skills/note-prose-cleanup/SKILL.md) | 修順既有筆記，清除重複聲明、整理過程與生硬句法，保留例子、來源與必要限制 | 自製；依句子用途判斷，不以關鍵字批次刪除 |
 
 ## 安裝（新電腦）
 
