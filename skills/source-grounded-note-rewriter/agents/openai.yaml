@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source-Grounded Note Rewriter"
+  short_description: "Fact-check and preserve long-form learning notes"
+  default_prompt: "Use $source-grounded-note-rewriter to fact-check and rewrite this note in place while preserving its learning flow."

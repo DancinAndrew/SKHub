@@ -1,0 +1,4 @@
+interface:
+  display_name: "Instagram 私訊關係分析"
+  short_description: "逐批分析 Instagram 私訊、追蹤關係變化並提供自然建議"
+  default_prompt: "Use $instagram-dm-relationship-analysis to analyze my latest Instagram DM batch in its own folder, compare it with prior behavior, and suggest practical next steps."

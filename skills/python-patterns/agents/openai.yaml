@@ -1,0 +1,4 @@
+interface:
+  display_name: "Python Patterns"
+  short_description: "Python idioms, typing, and structure"
+  default_prompt: "Use $python-patterns to design clean typed Python code."

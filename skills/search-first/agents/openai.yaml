@@ -1,0 +1,4 @@
+interface:
+  display_name: "Search First"
+  short_description: "Research reuse before custom coding"
+  default_prompt: "Use $search-first before adding a new dependency or custom utility."

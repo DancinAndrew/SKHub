@@ -1,0 +1,4 @@
+interface:
+  display_name: "個人旅遊管家"
+  short_description: "以實查、圖片與選項筆記引導旅行決策，雙方同意才進入下一階段"
+  default_prompt: "請用 $travel-concierge 整理這次旅行的需求與已有決策，確認目前階段，研究適合我的選項，並在雙方同意後才進入下一階段。"

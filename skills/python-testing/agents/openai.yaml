@@ -1,0 +1,4 @@
+interface:
+  display_name: "Python Testing"
+  short_description: "pytest fixtures, mocking, and coverage"
+  default_prompt: "Use $python-testing to plan pytest coverage for this Python change."

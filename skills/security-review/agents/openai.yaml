@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security Review"
+  short_description: "Security checklist for sensitive code"
+  default_prompt: "Use $security-review to check this change for security risks."

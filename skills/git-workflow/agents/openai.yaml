@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Workflow"
+  short_description: "Branch commit and PR workflow guidance"
+  default_prompt: "Use $git-workflow to shape the branch, commit, or PR plan."

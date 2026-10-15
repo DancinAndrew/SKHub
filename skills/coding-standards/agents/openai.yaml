@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coding Standards"
+  short_description: "Readable maintainable code conventions"
+  default_prompt: "Use $coding-standards to review code quality and naming."

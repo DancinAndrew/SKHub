@@ -1,0 +1,253 @@
+{
+  "schema": 1,
+  "skills": [
+    {
+      "name": "backend-development",
+      "source": "skills/backend-development",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "career-ops",
+      "source": "skills/career-ops",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "coding-standards",
+      "source": "skills/coding-standards",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "company-research",
+      "source": "skills/company-research",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "defuddle",
+      "source": "skills/defuddle",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "development-profile",
+      "source": "skills/development-profile",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "git-workflow",
+      "source": "skills/git-workflow",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "instagram-dm-relationship-analysis",
+      "source": "skills/instagram-dm-relationship-analysis",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "media-note",
+      "source": "skills/media-note",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "note-prose-cleanup",
+      "source": "skills/note-prose-cleanup",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "obsidian-cli",
+      "source": "skills/obsidian-cli",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "obsidian-markdown",
+      "source": "skills/obsidian-markdown",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "playwright",
+      "source": "skills/playwright",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "python-patterns",
+      "source": "skills/python-patterns",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "python-testing",
+      "source": "skills/python-testing",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "search-first",
+      "source": "skills/search-first",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "security-review",
+      "source": "skills/security-review",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "selective-delegation",
+      "source": "skills/selective-delegation",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "source-grounded-note-rewriter",
+      "source": "skills/source-grounded-note-rewriter",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "tech-resume",
+      "source": "skills/tech-resume",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "travel-concierge",
+      "source": "skills/travel-concierge",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "web-article-archive",
+      "source": "skills/web-article-archive",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    }
+  ],
+  "local_skills": [
+    {
+      "name": "impeccable",
+      "source": ".local/skills/impeccable",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    },
+    {
+      "name": "write-like-me",
+      "source": ".local/skills/write-like-me",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    }
+  ],
+  "external_skills": [
+    {
+      "name": "ego-browser",
+      "owner": "ego browser application",
+      "platforms": [
+        "codex",
+        "claude"
+      ]
+    }
+  ],
+  "retired": {
+    "adversarial-spec-review": "development-profile",
+    "api-design": "backend-development",
+    "architecture-decision-records": "development-profile",
+    "backend-patterns": "backend-development",
+    "content-hash-cache-pattern": "Retired: unused or redundant generic guidance; no automatic reinstall",
+    "context-budget": "Retired: unused or redundant generic guidance; no automatic reinstall",
+    "continuous-learning-v2": "Retired: unused or redundant generic guidance; no automatic reinstall",
+    "cost-aware-llm-pipeline": "backend-development",
+    "database-migrations": "backend-development",
+    "deep-research": "native research tools and specialized research skills",
+    "deployment-patterns": "backend-development",
+    "docker-patterns": "backend-development",
+    "eli5": "shared communication profile",
+    "error-handling": "backend-development",
+    "eval-harness": "backend-development",
+    "fastapi-patterns": "backend-development",
+    "finding-duplicate-functions": "coding-standards",
+    "grill-me": "development-profile",
+    "hatch-pet": "Work Pets plugin",
+    "iterative-retrieval": "Retired: unused or redundant generic guidance; no automatic reinstall",
+    "json-canvas": "Retired: unused or redundant generic guidance; no automatic reinstall",
+    "mcp-server-patterns": "backend-development",
+    "mle-workflow": "backend-development",
+    "obsidian-bases": "obsidian-markdown",
+    "pdf": "platform plugin",
+    "post-mortem": "development-profile",
+    "postgres-patterns": "backend-development",
+    "python-dependency-consent": "development-profile",
+    "quiz-me": "shared communication profile",
+    "regex-vs-llm-structured-text": "Retired: unused or redundant generic guidance; no automatic reinstall",
+    "resume-health-check": "tech-resume",
+    "skill-trigger-eval": "SKHub maintenance checks",
+    "systematic-debugging": "development-profile",
+    "tdd-workflow": "development-profile",
+    "ubiquitous-language": "development-profile",
+    "ui-ux-pro-max": "impeccable",
+    "verification-loop": "development-profile",
+    "vue-patterns": "Retired: unused or redundant generic guidance; no automatic reinstall"
+  },
+  "upstream": {
+    "agentkit": "f02fe81cb5b8930fbf337a79baa7b7d96c926cfc",
+    "mattpocock/skills": "49dd158d1076134a641b33efb035946536778336"
+  }
+}

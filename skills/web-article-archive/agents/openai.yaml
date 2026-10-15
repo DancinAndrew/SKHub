@@ -1,0 +1,4 @@
+interface:
+  display_name: "網頁文章收錄與歸檔"
+  short_description: "下載網頁 Markdown、保留全文並整理格式，沿用既有分類歸檔，位置不明先詢問"
+  default_prompt: "使用 $web-article-archive 收錄這篇文章，下載 Markdown、整理格式並歸檔；位置不明時先問我。"
