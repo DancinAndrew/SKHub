@@ -1,0 +1,4 @@
+interface:
+  display_name: "Selective Delegation"
+  short_description: "Route bounded work and review without repeating it"
+  default_prompt: "Use $selective-delegation to execute this approved task with suitable models and focused review."

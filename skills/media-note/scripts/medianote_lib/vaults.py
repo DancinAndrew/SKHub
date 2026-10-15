@@ -8,7 +8,10 @@ from typing import Any
 
 from .common import MediaNoteError, read_json, safe_filename
 
-CONFIG = Path(os.environ.get("MEDIANOTE_VAULTS", Path(__file__).resolve().parents[2] / "config" / "vaults.json"))
+_SKHUB_ROOT = Path(__file__).resolve().parents[4]
+_LOCAL_CONFIG = _SKHUB_ROOT / ".local" / "config" / "media-note-vaults.json"
+_DEFAULT_CONFIG = Path(__file__).resolve().parents[2] / "config" / "vaults.json"
+CONFIG = Path(os.environ.get("MEDIANOTE_VAULTS", _LOCAL_CONFIG if _LOCAL_CONFIG.is_file() else _DEFAULT_CONFIG))
 
 
 def load() -> list[dict[str, Any]]:

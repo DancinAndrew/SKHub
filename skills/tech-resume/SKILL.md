@@ -1,10 +1,16 @@
 ---
 name: tech-resume
-description: Review, rewrite and tailor software / AI / data / solution-engineering resumes with hiring-manager principles — 6-second scan, impact bullets, one version per job description, no ATS myths. Also covers LinkedIn, GitHub profile and cover letters for job hunting. Use when the user says "看我的履歷", "履歷健檢", "幫我改履歷", "改 bullet", "針對這個 JD 改履歷", "review my resume", "tailor my resume", "rewrite these bullets", or hands over a resume PDF/text, a job description, or a cover-letter draft.
-origin: personal — principles paraphrased and condensed from Gergely Orosz, "The Tech Resume Inside Out" (ByteByteGo course edition). Not a copy of the book.
+description: Review, rewrite and tailor software / AI / data / solution-engineering resumes with hiring-manager principles — 6-second scan, impact bullets, one version
+  per job description, no ATS myths. Also covers LinkedIn, GitHub profile and cover letters for job hunting. Use when the user says "看我的履歷", "履歷健檢", "幫我改履歷", "改 bullet",
+  "針對這個 JD 改履歷", "review my resume", "tailor my resume", "rewrite these bullets", or hands over a resume PDF/text, a job description, or a cover-letter draft.
+metadata:
+  origin: personal — principles paraphrased and condensed from Gergely Orosz, "The Tech Resume Inside Out" (ByteByteGo course edition). Not a copy of the book.
 ---
 
 # /tech-resume — 技術履歷健檢、改寫與客製化
+
+For 履歷健檢 or an audit before rewriting, read [health-check guidance](references/health-check.md).
+
 
 履歷只有一個目的：讓對的人願意約你面試。它不是完整的工作紀錄。
 所有建議都用同一把尺量：**這個改動有沒有讓不認識你、手上有上百份履歷的 recruiter 或 hiring manager，在幾秒內更確定你適合「這個」職位？**

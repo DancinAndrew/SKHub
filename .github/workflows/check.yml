@@ -1,0 +1,18 @@
+name: Check shared skills
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test installer boundaries
+        run: python3 -m unittest discover -s tests -v
+      - name: Install into an isolated home
+        run: ./install.sh --home "$RUNNER_TEMP/skhub-test-home"
+      - name: Confirm installation is repeatable
+        run: ./install.sh --home "$RUNNER_TEMP/skhub-test-home" --check
