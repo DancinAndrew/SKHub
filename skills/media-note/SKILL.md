@@ -7,12 +7,12 @@ description: >-
   user shares such a link or files and asks to 做筆記、轉成筆記、整理成筆記、課程筆記、逐字稿轉筆記, make notes,
   or transcribe for notes. Replaces obsidian-course-note and spotify-podcast-course-note.
 metadata:
-  version: "3.0.0"
+  version: "3.2.0"
 ---
 
 # media-note
 
-版本 3.0.0：影音閱讀筆記預設使用完整白話推理的文章格式；課程與舊版時間軸仍相容。
+版本 3.2.0：影音與課程筆記都使用完整白話推理的文章格式（reading-v3），版面依 note-format 的「版面與標記」（術語、程式碼、可點的講義頁連結、只截有額外資訊的投影片）；舊版時間軸只用來維護既有筆記。
 
 影音來源 → 逐字稿（上傳字幕或本機 Whisper）→ 需要時截影片圖表或嵌投影片頁 → 繁中 Obsidian 筆記。
 下載、轉錄、抽圖、PDF、對頁、路徑、驗收全部走同一支 driver，Codex 與 Claude Code 共用：
@@ -104,7 +104,7 @@ uv run ~/.agents/skills/media-note/scripts/medianote.py align --work "<transcrip
    uv run ~/.agents/skills/media-note/scripts/medianote.py paths --vault Engineering --title "機器學習 Week2：Introduction to AI & ML"
    ```
 
-3. 按 note-format 的語意章節寫完整閱讀文章，保留主要說話順序與必要推理；全篇來源 coverage 留工作區。課程學習格式另依 course-format，不批次改無生成證據的課程。
+3. 按 note-format 的語意章節寫完整閱讀文章，保留主要說話順序與必要推理；開頭順序、列點、粗體、術語格式、螢光、callout 顏色、「這節記住」、公式、程式碼、講義頁連結與回聽位置都照 note-format 的「版面與標記」。課程有 notebook 時先讀它，程式碼以講義與 notebook 原文為準。全篇來源 coverage 留工作區。課程錄音同樣用這個格式；course-format 只用來維護既有的舊版時間軸筆記，不批次改無生成證據的課程。
 4. 圖片：
    - A：挑能支撐各段解釋的原圖候選（總覽圖不能取代原圖），依筆記順序匯出，貼上輸出的 `embed`：
 
@@ -112,7 +112,7 @@ uv run ~/.agents/skills/media-note/scripts/medianote.py align --work "<transcrip
      uv run ~/.agents/skills/media-note/scripts/medianote.py export-frames --work "$HOME/.cache/media-note/yt-8BN8p5xDkzw" --pick 1,9,20,28,38,46,52,61,74,83,99 --dest "<paths 輸出的 attachments_dir>"
      ```
 
-   - C：確認過的對應頁匯出成圖片（預設 JPEG，比 PNG 小 2–4 倍；要 PNG 加 `--format png`），貼上 `embed`：
+   - C：只匯出符合 note-format 截圖原則的頁面（圖表、示意圖、完整表格、執行結果等正文給不了的資訊）；純文字、公式、程式碼或數字已寫進正文的頁面改用 `[[PDF#page=N|講義簡名 p.N]]` 連結。匯出預設 JPEG（比 PNG 小 2–4 倍；要 PNG 加 `--format png`），貼上 `embed`：
 
      ```bash
      uv run ~/.agents/skills/media-note/scripts/medianote.py export-pages --pdf "Week2/2.Introduction-to-ML.pdf" --pages 4,8,13,19,23,26,29,35,40,45,46,48,50,53 --dest "<paths 輸出的 attachments_dir>"

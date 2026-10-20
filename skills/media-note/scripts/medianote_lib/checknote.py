@@ -108,9 +108,24 @@ def _list_indentation(lines: list[str]) -> list[str]:
     return errors
 
 
+def _without_code(text: str) -> str:
+    """Blank out fenced code (also inside callouts) and inline code spans.
+
+    Code such as `df[['price', 'width']]` looks like a wikilink, and identifiers in code are not prose.
+    """
+    kept, fenced = [], False
+    for line in text.splitlines():
+        if re.sub(r"^(?:>\s*)+", "", line).lstrip().startswith("```"):
+            fenced = not fenced
+            kept.append("")
+            continue
+        kept.append("" if fenced else re.sub(r"`[^`\n]+`", "", line))
+    return "\n".join(kept)
+
+
 def _prose_only(body: str) -> str:
-    """Drop fenced code (e.g. Mermaid), link targets and URLs so only reader-facing prose is scanned."""
-    body = re.sub(r"```.*?```", "", body, flags=re.DOTALL)
+    """Drop code, link targets and URLs so only reader-facing prose is scanned."""
+    body = _without_code(body)
     body = re.sub(r"\[\[[^\]|]*\|?", "[[", body)
     return re.sub(r"\]\([^)]*\)|https?://\S+", "", body)
 
@@ -275,14 +290,15 @@ def check(note: Path, coverage: Path | None = None) -> dict[str, Any]:
     errors += _list_indentation(lines)
     errors += [f"placeholder text: `{m.group(0)}`" for m in PLACEHOLDER.finditer(text)]
     root = find_vault_root(note.resolve().parent)
-    embeds = EMBED.findall(text)
+    linkable = _without_code(text)
+    embeds = EMBED.findall(linkable)
     if root:
         names = {p.stem for p in root.rglob("*.md")} | {p.name for p in root.rglob("*") if p.is_file()}
         for target in embeds:
             # Obsidian resolves a bare `![[name.ext]]` against the whole vault, not just the note's folder.
             if not ((root / target).exists() or (note.parent / target).exists() or Path(target).name in names):
                 errors.append(f"embed not found: {target}")
-        for target in WIKILINK.findall(text):
+        for target in WIKILINK.findall(linkable):
             if Path(target).name not in names and Path(target).stem not in names:
                 errors.append(f"wikilink target not found in vault: {target}")
     else:

@@ -122,3 +122,26 @@ def test_unknown_coverage_stays_explicit_and_duplicate_ids_fail(tmp_path):
 def test_legacy_last_interval_is_checked(tmp_path):
     errors, _, _ = checknote._timeline(['### [00:00–00:10] first', '### [00:10–00:05] last'], 10)
     assert any('ends before' in e for e in errors)
+
+
+def test_code_is_not_read_as_wikilinks_or_acronyms(tmp_path):
+    note = make_note(tmp_path)
+    code = (
+        "\n```python\nX = auto[['horsepower', 'width']]  # SIMCLR ABCD\n```\n\n"
+        "> [!example]- 練習\n> ```python\n> X = auto[['width', 'engine-size']]\n> ```\n\n"
+        "檔案 `Paper-SIMCLR.pdf` 與 `df[['a']]`。\n"
+    )
+    note.write_text(ARTICLE.replace("先講取得現金，再講需求是否改變。", "先講取得現金，再講需求是否改變。" + code))
+    result = checknote.check(note)
+    assert result['ok'], result['errors']
+    assert not any('SIMCLR' in w or 'ABCD' in w for w in result['warnings'])
+
+
+def test_pdf_page_link_resolves_to_the_pdf(tmp_path):
+    note = make_note(tmp_path)
+    (note.parent / 'Slides.pdf').write_bytes(b'%PDF')
+    linked = ARTICLE.replace("先講取得現金", "見 [[Slides.pdf#page=3|講義 p.3]]，先講取得現金")
+    note.write_text(linked)
+    assert checknote.check(note)['ok']
+    note.write_text(linked.replace('Slides.pdf#', 'Missing.pdf#'))
+    assert any('Missing.pdf' in e for e in checknote.check(note)['errors'])
