@@ -7,12 +7,12 @@ description: >-
   user shares such a link or files and asks to 做筆記、轉成筆記、整理成筆記、課程筆記、逐字稿轉筆記, make notes,
   or transcribe for notes. Replaces obsidian-course-note and spotify-podcast-course-note.
 metadata:
-  version: "3.2.0"
+  version: "3.2.1"
 ---
 
 # media-note
 
-版本 3.2.0：影音與課程筆記都使用完整白話推理的文章格式（reading-v3），版面依 note-format 的「版面與標記」（術語、程式碼、可點的講義頁連結、只截有額外資訊的投影片）；舊版時間軸只用來維護既有筆記。
+版本 3.2.1：影音與課程筆記都使用完整白話推理的文章格式（reading-v3），版面依 note-format 的「版面與標記」（術語、程式碼、可點的講義頁連結、只截有額外資訊的投影片）；舊版時間軸只用來維護既有筆記。
 
 影音來源 → 逐字稿（上傳字幕或本機 Whisper）→ 需要時截影片圖表或嵌投影片頁 → 繁中 Obsidian 筆記。
 下載、轉錄、抽圖、PDF、對頁、路徑、驗收全部走同一支 driver，Codex 與 Claude Code 共用：
